@@ -1,0 +1,38 @@
+// Property of CTax Corporation //
+
+#include <iostream>
+
+using namespace std;
+
+int(main) {
+    
+    double clientIncome, itemizedDeductions, standardDeductions deductionUsed;
+    char filingStatus;
+    
+    cout << "Welcome to the 2024 Tax Calculator" << endl;
+    cout << "Please enter your 2024 income: ";
+    cin >> clientIncome;
+    cout << "Is your filing status single (type s), married filing joint (type m), or head of household (type h)";
+    cin >> filingStatus;
+    cout << "Please enter your total amount of itemized deductions: ";
+    cin >> itemizedDeductions;
+    
+    if (filingStatus == 's') {
+        standardDeduction = 14600.00;
+    }
+    else if (filingStatus == 'm') {
+        standardDeduction = 29200.00;
+    }
+    else if (filingStatus == 'h') {
+        standardDeduction = 21900.00;
+    }
+    
+    if (itemizedDeductions > standardDeduction) {
+        deductionUsed = itemizedDeductions;
+    }
+    else {
+        deductionUsed = standardDeduction;
+    }
+    
+    return 0;
+}
